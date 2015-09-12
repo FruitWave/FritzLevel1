@@ -1,0 +1,12 @@
+import javax.swing.JFrame;
+
+
+public class Jïgglēbyteš {
+
+	public static void main(String[] args) {
+	JFrame glassWall = new JFrame()	
+
+	}
+	
+
+}

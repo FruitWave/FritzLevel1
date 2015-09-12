@@ -1,0 +1,14 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class Jïgglēbyteš {
+
+	public static void main(String[] args) {
+	JFrame glassWall = new JFrame();
+	JPanel stoneHouse = new JPanel();
+
+	}
+	
+
+}

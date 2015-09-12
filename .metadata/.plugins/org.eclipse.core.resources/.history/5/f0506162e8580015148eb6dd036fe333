@@ -1,0 +1,21 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+public class Jïgglēbyteš {
+JButton jïgglēbyte = new JButton();
+	public static void main(String[] args) {
+	JFrame glassWall = new JFrame();
+	JPanel stoneHouse = new JPanel();
+	glassWall.add(stoneHouse);
+	JTextField woodenDoor = new JTextField(25);
+	stoneHouse.add(woodenDoor);
+	}
+	
+	void airScape(){
+		
+	}
+
+}
