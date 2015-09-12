@@ -1,0 +1,27 @@
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Jïgglēbyteš implements ActionListener {
+	JButton jïgglēbyte = new JButton();
+	JFrame glassWall = new JFrame();
+	JPanel stoneHouse = new JPanel();
+	JTextField woodenDoor = new JTextField(25);
+
+	public static void main(String[] args) {
+		Jïgglēbyteš elementStorm = new Jïgglēbyteš();
+		elementStorm.airScape();
+	}
+
+	void airScape() {
+		glassWall.add(stoneHouse);
+		stoneHouse.add(woodenDoor);
+		glassWall.pack();
+		glassWall.setVisible(true);
+		woodenDoor.addActionListener(this);
+	}
+
+}

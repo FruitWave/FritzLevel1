@@ -1,0 +1,61 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.regex.Pattern;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Jïgglēbyteš implements ActionListener {
+	JButton jïgglēbyte = new JButton();
+	JFrame glassWall = new JFrame();
+	JPanel stoneHouse = new JPanel();
+	JTextField woodenDoorOpen = new JTextField(125);
+	JTextField woodenDoorClosed = new JTextField(125);
+
+	public static void main(String[] args) {
+		Jïgglēbyteš elementStorm = new Jïgglēbyteš();
+		elementStorm.airScape();
+	}
+
+	void airScape() {
+		jïgglēbyte
+				.setText("There is the elementStorm. The only thing outside it is the airScape, the air force field which surrounds and protects the glassWall. The glassWall surrounds the stoneHouse. The stoneHouse has a woodenDoor. The woodenDoor is open above-^, and closed below -v");
+		stoneHouse.add(woodenDoorOpen);
+		stoneHouse.add(jïgglēbyte);
+		stoneHouse.add(woodenDoorClosed);
+		glassWall.add(stoneHouse);
+		glassWall.pack();
+		glassWall.setSize(1000, 1000);
+		glassWall.setVisible(true);
+		jïgglēbyte.addActionListener(this);
+
+	}
+
+	String convert(String binary) {
+		if (binary.length() != 8) {
+			JOptionPane.showMessageDialog(null, "Enter 8 bits, silly!!!");
+			return 0;
+		}
+		if (!Pattern.matches("\2", binary)) {
+			JOptionPane.showMessageDialog(null,
+					"Binary can only contain 1s or 0s, silly!!!");
+			return 0;
+		}
+		try {
+			int asciiValue = Integer.parseInt(binary, 2);
+			return asciiValue;
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Enter a binary, silly!!!");
+			// question.setText("");
+			return 0;
+		}
+	}
+
+	public void actionPerformed(ActionEvent e) {
+
+	}
+
+}
