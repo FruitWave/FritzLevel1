@@ -23,12 +23,12 @@ public class Jïgglēbyteš implements ActionListener {
 				.setText("There is the elementStorm. The only thing outside it is the airScape, the air force field which surrounds and protects the glassWall. The glassWall surrounds the stoneHouse. The stoneHouse has a woodenDoor. The woodenDoor is open above-^, and closed below -v");
 		stoneHouse.add(woodenDoorOpen);
 		stoneHouse.add(jïgglēbyte);
+		jïgglēbyte.addActionListener(this);
 		stoneHouse.add(woodenDoorClosed);
 		glassWall.add(stoneHouse);
 		glassWall.pack();
 		glassWall.setSize(1000, 1000);
 		glassWall.setVisible(true);
-		jïgglēbyte.addActionListener(this);
 
 	}
 
@@ -39,7 +39,8 @@ public class Jïgglēbyteš implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		// System.out.println("Converted Value" + convert());
+		woodenDoorClosed.setText("Converted Value: "
+				+ convert(woodenDoorOpen.getText()));
 
 	}
 }
