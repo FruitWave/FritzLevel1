@@ -1,4 +1,4 @@
-import java.awt.event.ActionEvent;
+Iimport java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URI;
 
@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
-public class CutnisTV implements ActionListener{
+public class CutnisTV implements ActionnListener{
 	JButton thefirstbutton = new JButton();
 	JButton thesecondbutton = new JButton();
 	JButton thethirdbutton = new JButton();
@@ -40,15 +40,15 @@ public class CutnisTV implements ActionListener{
 	
 	
 	void showDucks() {
-		playVideo("EpiGS-3PDU8");
+		playVideo("https://www.youtube.com/watch?v=B00nfVc4FPI");
 	}
 
 	void showFrog() {
-		playVideo("aSjCb-FfxhI");
+		playVideo("https://www.youtube.com/watch?v=sd4bqmP_460");
 	}
 	
 	void showFluffyUnicorns() {
-		playVideo("qRC4Vk6kisY");
+		playVideo("https://www.youtube.com/watch?v=Qit3ALTelOo00");
 	}
 
 	void playVideo(String videoID) {
